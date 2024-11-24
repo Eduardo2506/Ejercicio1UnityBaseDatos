@@ -1,3 +1,4 @@
+using Game1;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -90,6 +91,8 @@ public class ScoreManager : MonoBehaviour
     }
     private void GameOver()
     {
+        GameData.puntaje = currentScore;
+
         isGameActive = false;
         clickButton.interactable = false;
         gameOverPanel.SetActive(true);
